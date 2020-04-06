@@ -1,54 +1,27 @@
-  import Vue from 'vue'
-  import Router from 'vue-router'
-  import firebase from 'firebase'
+import Vue from "vue";
+import VueRouter from "vue-router";
+// import { store } from "../store";
+// import Home from "./core/Home.vue";
+// import Register from "./auth/Register.vue";
+// import Login from "./auth/Login.vue";
+// import UserDetail from "./auth/UserDetail.vue";
+// import CreatePost from "./core/CreatePost.vue";
+// import EditPost from "./core/EditPost.vue";
+// import VW from "./core/VW.vue";
+// import SinglePost from "./core/SinglePost.vue";
+// import AUDI from "./core/AUDI.vue";
+// import BMW from "./core/BMW.vue";
 
-  import Login from '@/components/Login'
-  import Dashboard from '@/components/Dashboard'
-  import Settings from '@/components/Settings'
+Vue.use(VueRouter);
 
-  Vue.use(Router)
-
-  const router = new Router({
-    mode: 'history',
-    routes: [{
-        path: '*',
-        redirect: '/dashboard'
-      },
-      {
-        path: '/login',
-        name: 'Login',
-        component: Login
-      },
-      {
-        path: '/dashboard',
-        name: 'Dashboard',
-        component: Dashboard,
-        meta: {
-          requiresAuth: true
-        }
-      },
-      {
-        path: '/settings',
-        name: 'Settings',
-        component: Settings,
-        meta: {
-          requiresAuth: true
-        }
-      }
-    ]
-  })
-
-  router.beforeEach((to, from, next) => {
-    const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
-    const currentUser = firebase.auth().currentUser
-
-    if (requiresAuth && !currentUser) {
-      next('/login')
-    } else if (requiresAuth && currentUser) {
-      next()
-    } else {
-      next()
-    }
-  })
-
-  export default router
+export default new VueRouter({
+  mode: "history",
+  routes: [
+    
+   
+   
+    
+    
+    
+  ]
+});

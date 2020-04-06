@@ -7,16 +7,16 @@
             <router-link to="/">Home</router-link>
           </li>
           <li>
-            <router-link to="/vuejs-posts">VW</router-link>
+            <router-link to="/vw-posts">VW</router-link>
           </li>
           <li>
-            <router-link to="/angular-posts">AUDI</router-link>
+            <router-link to="/audi-posts">AUDI</router-link>
           </li>
           <li>
-            <router-link to="/react-posts">BMW</router-link>
+            <router-link to="/bmw-posts">BMW</router-link>
           </li>
           <li>
-            <router-link to="/react-posts">MERCEDES</router-link>
+            <router-link to="/mercedes-posts">MERCEDES</router-link>
           </li>
         </ul>
         <ul class="right" v-if="!isLoggedIn">

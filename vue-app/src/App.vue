@@ -10,12 +10,13 @@
 import Navigation from "./components/Navigation.vue";
 import Footer from "./components/Footer.vue";
 
+
 export default {
   name: "App",
 
   components: {
     AppNavigation: Navigation,
-    AppFooter: Footer
+    AppFooter: Footer,
   },
 
   data: () => ({
@@ -24,8 +25,12 @@ export default {
 };
 </script>
 <style>
+image {
+  background-image: url("/assets/images(1).png");
+}
+
 .wrapper {
-  width: 1280px;
+  width: 1350px;
   margin: 0 auto 150px auto;
 }
 a {

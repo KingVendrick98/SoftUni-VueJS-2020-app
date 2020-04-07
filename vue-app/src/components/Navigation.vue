@@ -32,7 +32,7 @@
             <router-link to="/create-post">Create post</router-link>
           </li>
           <li>
-            <router-link to="/user-detail">User detail</router-link>
+            <router-link to="/user-detail">Profile</router-link>
           </li>
 
           <li>

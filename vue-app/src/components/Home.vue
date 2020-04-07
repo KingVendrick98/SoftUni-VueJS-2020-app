@@ -6,7 +6,7 @@
     </div>
     <div class="vw">
       <h2>Recent post from VW</h2>
-      <div class="single-item" v-for="post in getVueData" :key="post.uid">
+      <div class="single-item" v-for="post in getVWData" :key="post.uid">
         <router-link :to="'/single-post/' + post.uid">
           <div class="div-img">
             <img :src="post.imgUrl" alt />
@@ -18,7 +18,7 @@
     </div>
     <div class="audi">
       <h2>Recent post from AUDI</h2>
-      <div class="single-item" v-for="post in getNgData" :key="post.uid">
+      <div class="single-item" v-for="post in getAUDIData" :key="post.uid">
         <router-link :to="'/single-post/' + post.uid">
           <div class="div-img">
             <img :src="post.imgUrl" alt />
@@ -30,7 +30,7 @@
     </div>
     <div class="bmw">
       <h2>Recent post from BMW</h2>
-      <div class="single-item" v-for="post in getReactData" :key="post.uid">
+      <div class="single-item" v-for="post in getBMWData" :key="post.uid">
         <router-link :to="'/single-post/' + post.uid">
           <div class="div-img">
             <img :src="post.imgUrl" alt />
@@ -42,7 +42,7 @@
     </div>
     <div class="mercedes">
       <h2>Recent post from MERCEDES</h2>
-      <div class="single-item" v-for="post in getNgData" :key="post.uid">
+      <div class="single-item" v-for="post in getMERCEDESData" :key="post.uid">
         <router-link :to="'/single-post/' + post.uid">
           <div class="div-img">
             <img :src="post.imgUrl" alt />

@@ -18,7 +18,6 @@
     <div class="single-post" v-for="post in posts" :key="post.uid">
       <div class="post-title">
         <router-link :to="'single-post/' + post.uid">
-          <h4></h4>
           <p>
             <span>{{post.title}}</span>
             <span style="margin-left: 50px">Category: {{post.category}}</span>
@@ -65,8 +64,7 @@ h1 {
   color: #000000;
 }
 .single-post {
-  background-color: white;
-  border: 1px solid #000000;
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   margin-bottom: 15px;
 }
@@ -76,7 +74,8 @@ h1 {
 .post-title {
   display: inline-block;
   width: 70%;
-  margin-left: 20px;
+  margin-left: 0px;
+  border: 3px solid #000000;
   vertical-align: top;
 }
 #edit {

@@ -14,6 +14,7 @@ import SinglePost from "../components/SinglePost.vue";
 import AUDI from "../components/AUDI.vue";
 import BMW from "../components/BMW.vue";
 import MERCEDES from "../components/MERCEDES.vue";
+import Contact from "../components/Contact.vue"
 
 Vue.use(VueRouter);
 
@@ -37,6 +38,17 @@ export default new VueRouter({
     {
       path: "/login",
       component: Login,
+      beforeEnter: (to, from, next) => {
+        if (!store.state.isLoggedIn) {
+          next(true);
+        } else {
+          next("/");
+        }
+      }
+    },
+    {
+      path: "/contact",
+      component: Contact,
       beforeEnter: (to, from, next) => {
         if (!store.state.isLoggedIn) {
           next(true);
@@ -79,10 +91,26 @@ export default new VueRouter({
         }
       }
     },
-    { path: "/VW-posts", component: VW },
-    { path: "/AUDI-posts", component: AUDI },
-    { path: "/BMW-posts", component: BMW },
-    { path: "/MERCEDES-posts", component: MERCEDES },
-    { path: "/single-post/:id", component: SinglePost, props: true }
+    {
+      path: "/VW-posts",
+      component: VW
+    },
+    {
+      path: "/AUDI-posts",
+      component: AUDI
+    },
+    {
+      path: "/BMW-posts",
+      component: BMW
+    },
+    {
+      path: "/MERCEDES-posts",
+      component: MERCEDES
+    },
+    {
+      path: "/single-post/:id",
+      component: SinglePost,
+      props: true
+    }
   ]
 });

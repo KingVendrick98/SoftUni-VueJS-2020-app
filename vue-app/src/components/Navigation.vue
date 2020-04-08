@@ -18,6 +18,9 @@
           <li>
             <router-link to="/mercedes-posts">MERCEDES</router-link>
           </li>
+          <li>
+            <router-link to="/contact">Contact</router-link>
+          </li>
         </ul>
         <ul class="right" v-if="!isLoggedIn">
           <li>

@@ -14,7 +14,8 @@ import SinglePost from "../components/SinglePost.vue";
 import AUDI from "../components/AUDI.vue";
 import BMW from "../components/BMW.vue";
 import MERCEDES from "../components/MERCEDES.vue";
-import Contact from "../components/Contact.vue"
+import Contact from "../components/Contact.vue";
+import About from "../components/About.vue"
 
 Vue.use(VueRouter);
 
@@ -49,13 +50,12 @@ export default new VueRouter({
     {
       path: "/contact",
       component: Contact,
-      beforeEnter: (to, from, next) => {
-        if (!store.state.isLoggedIn) {
-          next(true);
-        } else {
-          next("/");
-        }
-      }
+
+    },
+    {
+      path: "/about",
+      component: About,
+
     },
     {
       path: "/user-detail",

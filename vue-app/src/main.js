@@ -14,6 +14,7 @@ import {
 } from './store';
 
 
+
 Vue.use(Vuelidate);
 
 Vue.config.productionTip = false;

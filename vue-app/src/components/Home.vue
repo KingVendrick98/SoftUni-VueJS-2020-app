@@ -97,7 +97,6 @@ export default {
 .header {
   margin: 30px auto;
   padding: 30px 150px;
-  background-color: white;
   text-align: center;
 }
 h1,
@@ -120,7 +119,7 @@ h2 {
   display: inline-block;
   text-align: center;
   vertical-align: top;
-  background-color: white;
+  background-color: rgb(216, 216, 216);
   box-shadow: 0 0 10px -6px #000000;
 }
 .div-img {

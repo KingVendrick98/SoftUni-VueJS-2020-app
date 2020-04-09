@@ -25,8 +25,9 @@ export default {
 };
 </script>
 <style>
-image {
-  background-image: url("/assets/images(1).png");
+
+.backgroundImage {
+  background-image: url('https://c4.wallpaperflare.com/wallpaper/720/877/295/aston-martin-showroom-hd-wallpaper-preview.jpg');
 }
 
 .wrapper {
@@ -43,7 +44,6 @@ a {
   padding: 7px 40px;
   border: none;
   display: inline-block;
-  background-color: #42b983;
   color: white;
   font-size: 16px;
   cursor: pointer;

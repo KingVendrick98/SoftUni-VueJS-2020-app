@@ -44,7 +44,11 @@
         v-if="submitted && !$v.user.message.required"
         class="invalid-feedback"
       >Minimum 30 letters are required.</div>
-      <input class="button" type="submit" value="Send" />
+      <button class="button" type="submit" :disabled="$v.$invalid">Send</button>
+      <span
+        class="warning"
+        v-if="submitted || !$v.user.user_email.required || !$v.user.user_name.required || !$v.user.message.required"
+      >Name, Email and Message are required for the form to be acceptable.</span>
     </form>
   </form>
 </template>
@@ -92,7 +96,11 @@ export default {
         )
         .then(
           result => {
-            alert("Thank you for your message. It has been sent.", result.status, result.text);
+            alert(
+              "Thank you for your message. It has been sent.",
+              result.status,
+              result.text
+            );
           },
           error => {
             console.log("FAILED...", error);
@@ -107,6 +115,12 @@ export default {
 body {
   background: #f1f1f1;
   font-family: "Roboto", sans-serif;
+}
+
+.warning {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 .contact-form {

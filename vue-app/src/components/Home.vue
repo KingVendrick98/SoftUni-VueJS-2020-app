@@ -112,7 +112,7 @@ h2 {
   text-align: center;
 }
 .single-item {
-  width: 27%;
+  width: 30%;
   height: 360px;
   margin: 15px;
   padding: 15px;
